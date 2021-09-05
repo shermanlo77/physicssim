@@ -1,5 +1,9 @@
 # physicssim
 
+MIT License
+
+Copyright (c) 2008-2021 Sherman Lo
+
 A *Java* port of a high school physics/computing project. The original source code was in *Processing*.
 
 ## How to use
