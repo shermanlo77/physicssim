@@ -12,16 +12,19 @@ where `-option` can be one of the following options below.
 ## `-orbit` Planetary Orbit
 
 This simulation simulates planets orbiting the sun and it explains about circular motion and how it is used to derive one of Kepler's law.
+<br>
 <img src="images/orbit.png">
 
 ## `-satellite` Satellite Manoeuvres
 
 This simulation simulates satellites being affected by the Earth's gravitational field and derives equations for gravitational force, field strength and potential.
+<br>
 <img src="images/satellite.png">
 
 ## `-doppler` Doppler Shift
 
 This  simulation simulates electromagnetic waves being emitted from a moving source and derives equations for the Doppler Shift.
+<br>
 <img src="images/doppler.png">
 
 ## How to compile (Linux recommended)
