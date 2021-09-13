@@ -72,17 +72,13 @@ class DropDown {
         this.buttonsArray[i].display();
       }
       this.simulation.fill(this.simulation.attention);
-    }
-
-    //highlight the box if the mouse is over it
-    else if ((this.simulation.mouseX > this.x)
+    } else if ((this.simulation.mouseX > this.x)
         && (this.simulation.mouseX < this.x + this.menuLength)
         && (this.simulation.mouseY > this.y)
         && (this.simulation.mouseY < this.y + this.optionHeight)) {
+      //highlight the box if the mouse is over it
       this.simulation.fill(this.simulation.hover);
-    }
-
-    else {
+    } else {
       this.simulation.fill(this.simulation.foreground);
     }
 
@@ -113,9 +109,7 @@ class DropDown {
           && (this.simulation.mouseY < this.y + this.optionHeight)) {
         this.menuOpen= !this.menuOpen; //...reverse menuOpen boolean
       }
-    }
-    //if mouse is not on the menu
-    else {
+    } else { //if mouse is not on the menu
       this.closeMenu();
     }
   }

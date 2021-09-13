@@ -68,18 +68,12 @@ class NumberInput {
     //when the box is clicked
     if (this.acceptKeyboard) {
       this.simulation.fill(this.simulation.attention);
-    }
-
-    //when the mouse is over the box
-    else if ((this.simulation.mouseX > this.x)
+    } else if ((this.simulation.mouseX > this.x) //when the mouse is over the box
         && (this.simulation.mouseX < this.x + this.boxLength)
         && (this.simulation.mouseY > this.y)
         && (this.simulation.mouseY < this.y + this.boxHeight)) {
       this.simulation.fill(this.simulation.hover);
-    }
-
-    //when the mouse is outside the box
-    else {
+    } else { //when the mouse is outside the box
       this.simulation.fill(this.simulation.foreground);
     }
 
@@ -114,8 +108,7 @@ class NumberInput {
         && (this.simulation.mouseY < this.y + this.boxHeight)) {
       this.acceptKeyboard = true;
       this.justClicked = true;
-    }
-    else {
+    } else {
       this.acceptKeyboard = false;
     }
   }
@@ -126,41 +119,30 @@ class NumberInput {
       char key = this.simulation.key;
       if (key == '1') {
         this.appendDigit("1");
-      }
-      else if (key == '2') {
+      } else if (key == '2') {
         this.appendDigit("2");
-      }
-      else if (key == '3') {
+      } else if (key == '3') {
         this.appendDigit("3");
-      }
-      else if (key == '4') {
+      } else if (key == '4') {
         this.appendDigit("4");
-      }
-      else if (key == '5') {
+      } else if (key == '5') {
         this.appendDigit("5");
-      }
-      else if (key == '6') {
+      } else if (key == '6') {
         this.appendDigit("6");
-      }
-      else if (key == '7') {
+      } else if (key == '7') {
         this.appendDigit("7");
-      }
-      else if (key == '8') {
+      } else if (key == '8') {
         this.appendDigit("8");
-      }
-      else if (key == '9') {
+      } else if (key == '9') {
         this.appendDigit("9");
-      }
-      else if (key == '0') {
+      } else if (key == '0') {
         this.appendDigit("0");
-      }
-      else if (key == PConstants.BACKSPACE) {
+      } else if (key == PConstants.BACKSPACE) {
         if (this.numberOfDigits != 0) {
           this.numberOfDigits--;
           this.justClicked = false;
         }
-      }
-      else if ((key == PConstants.RETURN) || (key == PConstants.ENTER)) {
+      } else if ((key == PConstants.RETURN) || (key == PConstants.ENTER)) {
         this.acceptKeyboard = false;
         this.justClicked = false;
       }
@@ -207,11 +189,9 @@ class NumberInput {
     if (PApplet.parseInt(numberToConvert) < PApplet.parseInt(lowestValue)) {
       this.replaceArray(lowestValue);
       return PApplet.parseInt(lowestValue);
-    }
-
-    //if the user input is bigger then the highest possible value...
-    //...change the input value to the highest possible value and return it
-    else if (PApplet.parseInt(numberToConvert) > PApplet.parseInt(highestValue)) {
+    } else if (PApplet.parseInt(numberToConvert) > PApplet.parseInt(highestValue)) {
+      //if the user input is bigger then the highest possible value...
+      //...change the input value to the highest possible value and return it
       this.replaceArray(this.highestValue);
       return PApplet.parseInt(this.highestValue);
     }

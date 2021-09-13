@@ -57,9 +57,8 @@ class Button {
         this.y += 3; //shift the box 3 pixels down
         this.buttonMoved = true; //the button has been animated
       }
-    }
-    //else the button is returned to its original position
-    else {
+    } else {
+      //else the button is returned to its original position
       this.returnPosition();
     }
   }
@@ -94,9 +93,8 @@ class Button {
         && (this.simulation.mouseY >= this.yOrginal)
         && (this.simulation.mouseY < this.yOrginal + this.buttonHeight)) {
       this.simulation.fill(this.simulation.attention);
-    }
-    //when the mouse is not over the button
-    else {
+    } else {
+      //when the mouse is not over the button
       this.simulation.fill(this.simulation.foreground);
     }
     this.simulation.stroke(this.simulation.outline);

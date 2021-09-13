@@ -54,24 +54,22 @@ public abstract class Simulation extends PApplet {
     /**
      * @param colourPointer points to a colour scheme
      */
-    //Black
     if (colourPointer == 0) {
+      //Black
       this.background = this.color(0);
       this.foreground = this.color(0);
       this.outline = this.color(255);
       this.hover = this.color(150);
       this.attention = this.color(0, 0, 255);
-    }
-    //White
-    else if (colourPointer == 1) {
+    } else if (colourPointer == 1) {
+      //White
       this.background = this.color(255);
       this.foreground = this.color(255);
       this.outline = this.color(0);
       this.hover = this.color(150);
       this.attention = this.color(18, 64, 171);
-    }
-    //Blue
-    else if (colourPointer == 2) {
+    } else if (colourPointer == 2) {
+      //Blue
       this.background = this.color(6, 38, 111);
       this.foreground = this.color(42, 68, 128);
       this.outline = this.color(255);

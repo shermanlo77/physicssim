@@ -159,9 +159,8 @@ public class SatelliteManeuvers extends Simulation {
     //if line pointer points to gravitational lines, draw gravitational force lines
     if (this.linePointer == 1) {
       this.gravitationalLines();
-    }
-    //else if line pointer points to equipotentials, draw equipotentials
-    else if (this.linePointer == 2) {
+    } else if (this.linePointer == 2) {
+      //else if line pointer points to equipotentials, draw equipotentials
       this.equipotentialsLines();
     }
 
@@ -469,13 +468,10 @@ public class SatelliteManeuvers extends Simulation {
       //if it is approaching earth, 33 pixels from the centre
       if (PApplet.dist(this.pos.x, this.pos.y, width/3, height/2)<33) {
         return true;
-      }
-      //if it is 1000 pixels away from the Earth
-      else if (PApplet.dist(this.pos.x, this.pos.y, width/3, height/2) > 1000) {
+      } else if (PApplet.dist(this.pos.x, this.pos.y, width/3, height/2) > 1000) {
+        //if it is 1000 pixels away from the Earth
         return true;
-      }
-      //else the satellite is within boundaries
-      else {
+      } else { //else the satellite is within boundaries
         return false;
       }
     }

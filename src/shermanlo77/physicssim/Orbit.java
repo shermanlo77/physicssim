@@ -206,8 +206,7 @@ public class Orbit extends Simulation {
       if (PApplet.dist(this.width/3, this.height/2, this.mouseX, this.mouseY) > 15) {
         if (this.mouseButton == PConstants.LEFT) {
           this.planets.add(new Planet(false));
-        }
-        else if (this.mouseButton == PConstants.RIGHT) {
+        } else if (this.mouseButton == PConstants.RIGHT) {
           this.planets.add(new Planet(true));
         }
       }
@@ -316,8 +315,7 @@ public class Orbit extends Simulation {
       //Decrease the size of theta if it gets too big
       if (this.theta > PConstants.TWO_PI) {
         this.theta -= PConstants.TWO_PI;
-      }
-      else if (this.theta < -PConstants.TWO_PI) {
+      } else if (this.theta < -PConstants.TWO_PI) {
         this.theta += PConstants.TWO_PI;
       }
     }
@@ -327,13 +325,9 @@ public class Orbit extends Simulation {
       //Show distance from sun
       if (pointer == 1) {
         this.data = PApplet.str(PApplet.round(this.scaleR)) + "x10⁹ m";
-      }
-      //Show speed
-      else if (pointer == 2) {
+      } else if (pointer == 2) { //Show speed
         this.data = PApplet.str(PApplet.round(v)) + "m.s¯¹";
-      }
-      //Show acceleration towards the sun
-      else if (pointer == 3) {
+      } else if (pointer == 3) { //Show acceleration towards the sun
         float acceleration = PApplet.pow(v,2)*PApplet.pow(10,5)/r;
         this.data = PApplet.str(PApplet.round(acceleration)) + "x10¯⁵ m.s¯²";
       }

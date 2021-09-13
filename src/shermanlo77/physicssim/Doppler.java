@@ -128,8 +128,7 @@ public class Doppler extends Simulation {
       //Work out relativistic factor
       if (this.relativity) {
         this.gamma = 1/(PApplet.sqrt(1-PApplet.sq(this.v)));
-      }
-      else {
+      } else {
         this.gamma = 1;
       }
 
@@ -207,8 +206,7 @@ public class Doppler extends Simulation {
       if (this.relativityInput.returnValue() != -1) {
         if (this.relativityInput.returnValue() == 0) {
           this.relativity = true;
-        }
-        else {
+        } else {
           this.relativity = false;
         }
         this.relativityInput.closeMenu();
